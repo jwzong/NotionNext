@@ -59,7 +59,7 @@ export const BlogItem = props => {
             </div>
 
             <div className='text-sm'>
-              {/* {post.category && (
+              {post.category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
@@ -67,10 +67,10 @@ export const BlogItem = props => {
                     {post.category}
                   </span>
                 </SmartLink>
-              )} */}
+              )}
               {post?.tags &&
                 post?.tags?.length > 0 &&
-                post?.tags.map(t => (
+                post?.tags?.map(t => (
                   <SmartLink
                     key={t}
                     href={`/tag/${t}`}
