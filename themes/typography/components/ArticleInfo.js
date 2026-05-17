@@ -48,7 +48,9 @@ export default function ArticleInfo(props) {
               )}
               {post?.tags &&
                 post?.tags?.length > 0 &&
-                post?.tags.map(t => (
+                post?.tags
+                  ?.filter(t => t !== post.category)
+                  .map(t => (
                   <SmartLink
                     key={t}
                     href={`/tag/${t}`}
